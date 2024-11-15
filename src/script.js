@@ -5,11 +5,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   cards.forEach((card) => {
     card.addEventListener("click", () => {
+      const column = card.closest(".column").dataset.column;
+
       if (
         selectedCards.length < 2 &&
         !card.classList.contains("matched") &&
         !card.classList.contains("inactive")
       ) {
+        if (
+          selectedCards.length === 1 &&
+          selectedCards[0].closest(".column").dataset.column === column
+        ) {
+          selectedCards[0].classList.remove("selected");
+          selectedCards = [];
+        }
+
         card.classList.add("selected");
         selectedCards.push(card);
 
