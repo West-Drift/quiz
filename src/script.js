@@ -5,7 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   cards.forEach((card) => {
     card.addEventListener("click", () => {
-      if (selectedCards.length < 2 && !card.classList.contains("matched")) {
+      if (
+        selectedCards.length < 2 &&
+        !card.classList.contains("matched") &&
+        !card.classList.contains("inactive")
+      ) {
         card.classList.add("selected");
         selectedCards.push(card);
 
@@ -21,11 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
               firstCard.classList.add("incorrect");
               secondCard.classList.add("incorrect");
-              setTimeout(() => {
-                firstCard.classList.remove("selected", "incorrect");
-                secondCard.classList.remove("selected", "incorrect");
-              }, 1000);
             }
+            firstCard.classList.add("inactive");
+            secondCard.classList.add("inactive");
             selectedCards = [];
           }, 1000);
         }
