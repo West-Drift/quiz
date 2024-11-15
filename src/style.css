@@ -1,11 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200vh; /* Increase height to 2 full screen heights */
+  min-height: 100vh;
   background-color: #c7c2c2;
   font-family: Arial, sans-serif;
-  overflow-y: scroll; /* Enable vertical scrolling */
+  overflow-y: scroll;
+}
+
+.homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.homepage h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.homepage p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.homepage button {
+  width: 150px;
+  height: 50px;
+  background-color: #9e4187;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.homepage button:hover {
+  background-color: #7a3369;
 }
 
 .game-container {
@@ -13,11 +55,12 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 20px; /* Add margin to ensure title is visible */
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 h2 {
-  margin-bottom: 20px; /* Add margin to separate title from grid */
+  margin-bottom: 20px;
 }
 
 .grid {
@@ -42,15 +85,15 @@ h2 {
 }
 
 .card img {
-  width: 240px; /* Increase image size */
-  height: 240px; /* Increase image size */
+  width: 240px;
+  height: 240px;
   object-fit: cover;
   display: block;
-  border-radius: 10px; /* Rounded edges for images */
+  border-radius: 10px;
 }
 
 .card.selected img {
-  border: 3px solid rgb(224, 176, 42); /* Indicate selected item */
+  border: 3px solid rgb(224, 176, 42);
 }
 
 .card.correct img {
@@ -76,4 +119,20 @@ h2 {
   100% {
     transform: scale(1);
   }
+}
+
+#back-home {
+  margin-top: 40px;
+  width: 150px;
+  height: 50px;
+  background-color: #9e4187;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#back-home:hover {
+  background-color: #7a3369;
 }

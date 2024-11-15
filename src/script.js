@@ -1,4 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const getStartedButton = document.getElementById("get-started");
+  const backHomeButton = document.getElementById("back-home");
+  const homepage = document.querySelector(".homepage");
+  const gameContainer = document.querySelector(".game-container");
+
+  getStartedButton.addEventListener("click", () => {
+    homepage.style.display = "none";
+    gameContainer.style.display = "flex";
+  });
+
+  backHomeButton.addEventListener("click", () => {
+    gameContainer.style.display = "none";
+    homepage.style.display = "flex";
+  });
+
   const cards = document.querySelectorAll(".card");
   let selectedCards = [];
   let matchedCards = [];
