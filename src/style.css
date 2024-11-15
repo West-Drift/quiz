@@ -5,6 +5,7 @@ body {
   height: 100vh;
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
+  overflow-y: scroll; /* Enable vertical scrolling */
 }
 
 .game-container {
@@ -36,8 +37,8 @@ body {
 }
 
 .card img {
-  width: 120px;
-  height: 120px;
+  width: 240px; /* Increase image size */
+  height: 240px; /* Increase image size */
   object-fit: cover;
   display: block;
   border-radius: 10px; /* Rounded edges for images */
