@@ -2,44 +2,89 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image Matching Game</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>BL Tool | Quiz</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div class="game-container">
-      <h2>Tap to match the Satellite images and the photos below.</h2>
-      <div class="grid">
-        <div class="column" data-column="1">
-          <button class="card" data-id="1">
-            <img src="../assets/image1.png" alt="Image 1" />
-          </button>
-          <button class="card" data-id="2">
-            <img src="../assets/image2.png" alt="Image 2" />
-          </button>
-          <button class="card" data-id="3">
-            <img src="../assets/image3.png" alt="Image 3" />
-          </button>
-          <button class="card" data-id="4">
-            <img src="../assets/image4.png" alt="Image 4" />
-          </button>
-        </div>
-        <div class="column" data-column="2">
-          <button class="card" data-id="2">
-            <img src="../assets/image2.png" alt="Image 2" />
-          </button>
-          <button class="card" data-id="1">
-            <img src="../assets/image1.png" alt="Image 1" />
-          </button>
-          <button class="card" data-id="4">
-            <img src="../assets/image4.png" alt="Image 4" />
-          </button>
-          <button class="card" data-id="3">
-            <img src="../assets/image3.png" alt="Image 3" />
-          </button>
-        </div>
+    <main class="main">
+      <header class="header">
+        <a href="#" class="logo"><img src="logo.jpg" alt="" /></a>
+        <nav class="navbar">
+          <a href="#" class="active">Home</a>
+          <a href="#">About</a>
+          <a href="#">Units</a>
+          <a href="#">Contact</a>
+        </nav>
+      </header>
+      <div class="container">
+        <section class="quiz-section">
+          <div class="quiz-box">
+            <h1>Module Quiz</h1>
+            <div class="quiz-header">
+              <span>Unit 1</span>
+              <span class="header-score">Score: 0 / 5</span>
+            </div>
+            <h2 class="question-text">What does HTML stand for?</h2>
+            <div class="option-list"></div>
+            <div class="quiz-footer">
+              <span class="question-total">1 of 5 Questions</span>
+              <button class="next-btn">Next</button>
+            </div>
+          </div>
+
+          <div class="result-box">
+            <h2>Quiz Result!</h2>
+            <div class="percentage-container">
+              <div class="circular-progress">
+                <span class="progress-value">0%</span>
+              </div>
+            </div>
+            <span class="score-text">Your Score 0 out of 5</span>
+            <div class="buttons">
+              <button class="tryAgain-btn">Try Again</button>
+              <button class="goHome-btn">Go To Home</button>
+            </div>
+          </div>
+        </section>
+        <section class="home">
+          <div class="home-content">
+            <h1>Ground Truthing</h1>
+            <p>
+              The facts that are found when a location shown on a map, air
+              photograph, or satellite image is checked on the ground, as
+              validation. Ground truth allows image data to be related to real
+              features and materials on the ground. The collection of ground
+              truth data enables calibration of remote-sensing data, and aids in
+              the interpretation and analysis of what is being sensed.
+            </p>
+            <button class="start-btn">Get Started</button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div class="popup-info">
+      <h2>Quiz Guide</h2>
+      <span class="info">1. This quiz consists of 5 questions.</span>
+      <span class="info"
+        >2. Please allocate approximately 2 minutes to complete the quiz.</span
+      >
+      <span class="info"
+        >3. Once you begin, you will have 15 minutes to finish.</span
+      >
+      <span class="info"
+        >4. There is no partial credit for multiple-choice questions.</span
+      >
+      <span class="info">5. Good luck!</span>
+      <div class="btn-group">
+        <button class="info-btn exit-btn">Exit Quiz</button>
+        <a href="#" class="info-btn continue-btn">Continue</a>
       </div>
     </div>
+
+    <script src="questions.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
