@@ -3,51 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image Matching Game</title>
+    <title>Quiz App</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../assets/logo.jpg" alt="Logo" />
+      </div>
+      <ul class="nav-items">
+        <li><a href="#" id="nav-home">Home</a></li>
+        <li><a href="#" id="nav-about">About</a></li>
+        <li><a href="#" id="nav-quiz">Quiz</a></li>
+        <li><a href="#" id="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+
     <div class="homepage">
-      <h1>Welcome to the Image Matching Game</h1>
-      <p>
-        Test your skills by matching the satellite images with the photos below.
-      </p>
+      <h1>Welcome to the Quiz App</h1>
       <button id="get-started">Get Started</button>
     </div>
 
-    <div class="game-container" style="display: none">
-      <h2>Tap to match the Satellite images and the photos below.</h2>
-      <div class="grid">
-        <div class="column" data-column="1">
-          <button class="card" data-id="1">
-            <img src="../assets/image1.png" alt="Image 1" />
-          </button>
-          <button class="card" data-id="2">
-            <img src="../assets/image2.png" alt="Image 2" />
-          </button>
-          <button class="card" data-id="3">
-            <img src="../assets/image3.png" alt="Image 3" />
-          </button>
-          <button class="card" data-id="4">
-            <img src="../assets/image4.png" alt="Image 4" />
-          </button>
+    <div class="quiz-container" style="display: none">
+      <div class="quiz-page" id="page-1">
+        <h2>Page 1</h2>
+        <div class="question">
+          <p>What is the capital of France?</p>
+          <button class="option" data-correct="true">Paris</button>
+          <button class="option">London</button>
+          <button class="option">Berlin</button>
+          <button class="option">Madrid</button>
         </div>
-        <div class="column" data-column="2">
-          <button class="card" data-id="2">
-            <img src="../assets/image2.png" alt="Image 2" />
-          </button>
-          <button class="card" data-id="1">
-            <img src="../assets/image1.png" alt="Image 1" />
-          </button>
-          <button class="card" data-id="4">
-            <img src="../assets/image4.png" alt="Image 4" />
-          </button>
-          <button class="card" data-id="3">
-            <img src="../assets/image3.png" alt="Image 3" />
-          </button>
+        <div class="question">
+          <p>What is 2 + 2?</p>
+          <button class="option" data-correct="true">4</button>
+          <button class="option">3</button>
+          <button class="option">5</button>
+          <button class="option">6</button>
         </div>
+        <button id="next-1" style="display: none">Next</button>
       </div>
-      <button id="back-home">Back to Home</button>
+
+      <div class="quiz-page" id="page-2" style="display: none">
+        <h2>Page 2</h2>
+        <div class="question">
+          <p>What is the color of the sky?</p>
+          <button class="option" data-correct="true">Blue</button>
+          <button class="option">Green</button>
+          <button class="option">Red</button>
+          <button class="option">Yellow</button>
+        </div>
+        <div class="question">
+          <p>What is the largest planet in our solar system?</p>
+          <button class="option" data-correct="true">Jupiter</button>
+          <button class="option">Earth</button>
+          <button class="option">Mars</button>
+          <button class="option">Venus</button>
+        </div>
+        <div class="question">
+          <p>What is the boiling point of water?</p>
+          <button class="option" data-correct="true">100°C</button>
+          <button class="option">90°C</button>
+          <button class="option">80°C</button>
+          <button class="option">70°C</button>
+        </div>
+        <button id="next-2" style="display: none">Next</button>
+      </div>
+
+      <div class="game-container" style="display: none">
+        <h2>Tap to match the Satellite images and the photos below.</h2>
+        <div class="grid">
+          <div class="column" data-column="1">
+            <button class="card" data-id="1">
+              <img src="../assets/image1.png" alt="Image 1" />
+            </button>
+            <button class="card" data-id="2">
+              <img src="../assets/image2.png" alt="Image 2" />
+            </button>
+            <button class="card" data-id="3">
+              <img src="../assets/image3.png" alt="Image 3" />
+            </button>
+            <button class="card" data-id="4">
+              <img src="../assets/image4.png" alt="Image 4" />
+            </button>
+          </div>
+          <div class="column" data-column="2">
+            <button class="card" data-id="2">
+              <img src="../assets/image2.png" alt="Image 2" />
+            </button>
+            <button class="card" data-id="1">
+              <img src="../assets/image1.png" alt="Image 1" />
+            </button>
+            <button class="card" data-id="4">
+              <img src="../assets/image4.png" alt="Image 4" />
+            </button>
+            <button class="card" data-id="3">
+              <img src="../assets/image3.png" alt="Image 3" />
+            </button>
+          </div>
+        </div>
+        <button id="finish" style="display: none">Finish</button>
+      </div>
+
+      <div class="scoreboard" style="display: none">
+        <h2>Quiz Result!</h2>
+        <div class="score-circle">
+          <span id="score-percentage">0%</span>
+        </div>
+        <p>Your Score: <span id="score">0</span> out of 9</p>
+        <button id="try-again">Try Again</button>
+        <button id="go-home">Go To Home</button>
+      </div>
     </div>
 
     <script src="script.js"></script>
